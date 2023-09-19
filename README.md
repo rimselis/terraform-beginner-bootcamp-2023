@@ -27,3 +27,31 @@ To change the file chmod to allow execution, run `chmod u+x ./bin/install-terraf
 > Note: Template uses `init` task in `.gitpod.yml`, but it is run only with [new non-prebuilt workspaces](https://www.gitpod.io/docs/configure/workspaces/tasks#prebuild-and-new-workspaces), so `init` can be changed to `before` to always run them when environment/workspace is started.
 
 
+
+
+## Environment variables
+
+### Checking & searching existing environment variables
+
+```sh
+env
+
+env | grep terraform-beginner-bootcamp-2023
+```
+
+### Setting a variable in terminal scope
+
+```sh
+export PROJECT_ROOT='SOME_VALUE'
+echo $PROJECT_ROOT
+```
+
+### Setting a variable globally
+
+To set env variable globally, bash profiles can be used or [using GitPod](https://www.gitpod.io/docs/configure/projects/environment-variables#ways-of-setting-user-specific-environment-variables).
+
+#### Using GitPod
+
+```sh
+gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
+```
