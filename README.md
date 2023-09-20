@@ -58,3 +58,12 @@ gp env PROJECT_ROOT='/workspace/terraform-beginner-bootcamp-2023'
 
 After restart, it should be available in the terminal.
 
+
+
+## AWS CLI
+
+### Checking AWS credentials
+
+```sh
+aws sts get-caller-identity
+```
